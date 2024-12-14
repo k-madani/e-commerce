@@ -21,34 +21,22 @@ const Span = styled.div`
   color: ${({ theme }) => theme.text_secondary + 90};
 `;
 
-const TextButton = styled.div`
-  width: 100%;
-  text-align: end;
-  color: ${({ theme }) => theme.text_primary};
-  cursor: pointer;
-  font-size: 14px;
-  transition: all 0.3s ease;
-  font-weight: 500;
-  &:hover {
-    color: ${({ theme }) => theme.primary};
-  }
-`;
-
-const SignIn = () => {
+const SignUp = () => {
   return (
     <Container>
       <div>
-        <Title>Welcom to Armoire!👋</Title>
-        <Span>Please login your details here</Span>
+        <Title>create a new account👋</Title>
+        <Span>Enter your details here to create an account</Span>
       </div>
       <div style={{ display: "flex", gap: "20px", flexDirection: "column" }}>
+        <TextInput label="name" placeholder="Enter your name"/>
         <TextInput label="email" placeholder="Enter your email"/>
         <TextInput label="password" placeholder="**********"/>
-        <TextButton>Forgot Password?</TextButton>
-        <Button text="Sign In"/>
+        
+        <Button text="Sign Up"/>
       </div>
     </Container>
   )
 }
 
-export default SignIn;
+export default SignUp;
